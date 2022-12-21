@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import { useDataTest } from "../src";
-import { provider } from "./shared";
+import { provider } from "../src/test-utils/shared";
 
 describe("registerText", () => {
   test("with delimiter", async () => {

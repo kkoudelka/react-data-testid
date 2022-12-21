@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/kkoudelka/react-data-testid",
+    "type": "git"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-flow": "^7.18.6",

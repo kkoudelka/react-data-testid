@@ -1,7 +1,7 @@
 import React from "react";
 import { render, renderHook } from "@testing-library/react";
 import { useDataTest } from "../src";
-import { provider } from "./shared";
+import { provider } from "../src/test-utils/shared";
 
 test("Button has data-test-id='button'", async () => {
   const wrapper = provider({ name: "id" });

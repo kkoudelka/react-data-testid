@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, renderHook } from "@testing-library/react";
 import { useDataTest } from "../src";
-import { provider } from "./shared";
+import { provider } from "../src/test-utils/shared";
 
 test("Get button with delimiter", async () => {
   const wrapper = provider({ name: "id", useDelimiter: true });
