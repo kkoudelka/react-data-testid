@@ -23,14 +23,17 @@ const TestContext = React.createContext<ITestContext>({
   useDelimiter: false,
 });
 
-type TestContextProps = React.PropsWithChildren<Partial<ITestContext>>;
+type TestContextProps = React.PropsWithChildren<{ config: Partial<ITestContext> }>;
 
 /**
  * TestContextProvider is used to share the desired test name across the app.
  *
  * Default name value is "id", resulting in "data-test-id" attributes.
  */
-const TestContextProvider: React.FC<TestContextProps> = ({ children, name = "id", useDelimiter = false }) => {
+const TestContextProvider: React.FC<TestContextProps> = ({
+  children,
+  config: { name = "id", useDelimiter = false },
+}) => {
   return <TestContext.Provider value={{ name, useDelimiter }}>{children}</TestContext.Provider>;
 };
 
