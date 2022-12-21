@@ -30,14 +30,11 @@ type TestContextProps = React.PropsWithChildren<{ config: Partial<ITestContext> 
  *
  * Default name value is "id", resulting in "data-test-id" attributes.
  */
-const TestContextProvider: React.FC<TestContextProps> = ({
-  children,
-  config: { name = "id", useDelimiter = false },
-}) => {
+const DataTestProvider: React.FC<TestContextProps> = ({ children, config: { name = "id", useDelimiter = false } }) => {
   return <TestContext.Provider value={{ name, useDelimiter }}>{children}</TestContext.Provider>;
 };
 
-export default TestContextProvider;
+export default DataTestProvider;
 
 /**
  *
